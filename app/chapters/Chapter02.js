@@ -71,21 +71,10 @@ export default function Chapter02() {
         hole in the room and something new poured in.
       </motion.p>
 
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.65 }}
-        style={{ lineHeight: 1.6, maxWidth: "720px", marginBottom: "3rem" }}
-      >
-        That energy would become the foundation for one of the most influential
-        production collectives on Earth. But here, in Spectrum City, it was still
-        raw — still forming — still dangerous.
-      </motion.p>
-
       <motion.h2
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.75 }}
+        transition={{ duration: 0.8, delay: 0.65 }}
         style={{
           fontSize: "2.2rem",
           fontWeight: "700",
@@ -100,7 +89,7 @@ export default function Chapter02() {
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.9 }}
+        transition={{ duration: 0.8, delay: 0.8 }}
         style={{ lineHeight: 1.6, maxWidth: "720px", marginBottom: "1.4rem" }}
       >
         Spectrum City wasn’t a hobby — it was training. It was endurance. It was
@@ -111,7 +100,7 @@ export default function Chapter02() {
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.05 }}
+        transition={{ duration: 0.8, delay: 0.95 }}
         style={{ lineHeight: 1.6, maxWidth: "720px", marginBottom: "1.4rem" }}
       >
         Keith didn’t just mix records — he weaponized them. And that philosophy
@@ -121,47 +110,3 @@ export default function Chapter02() {
     </section>
   );
 }
-"use client";
-
-import Section from "../components/Section";
-import { motion } from "framer-motion";
-
-export default function Chapter02() {
-  return (
-    <Section id="chapter-02" snap={false}>
-      <div style={{ maxWidth: "900px" }}>
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          The Culture
-        </motion.h1>
-
-        <motion.p
-          style={{ marginTop: "2rem", lineHeight: "1.7" }}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 1 }}
-        >
-          Hip-hop was expanding, mutating, reinventing itself — and Keith
-          Shocklee was evolving even faster. Alongside Hank Shocklee, Chuck D,
-          and Eric “Vietnam” Sadler, Keith helped architect the most explosive,
-          layered, sonic blueprint the world had ever heard.
-        </motion.p>
-
-        <motion.p
-          style={{ marginTop: "1.4rem", lineHeight: "1.7" }}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.9, duration: 1 }}
-        >
-          They didn’t just sample records; they *re-engineered* them. Up to 80
-          samples in a single track, stacked like a skyscraper of rhythm.
-          Sirens, scratches, speeches, noise, melody — colliding until chaos
-          became precision.
-        </motion.p>
-
-        <motion.p
-          style={{ marginTop: "1.4rem", li
-
