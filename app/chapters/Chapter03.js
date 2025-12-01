@@ -21,9 +21,9 @@ export default function Chapter03() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 1 }}
         >
-          And then came **Public Enemy** — the most politically charged, socially
-          explosive force hip-hop had ever witnessed. At the epicenter of that
-          seismic sound stood Keith Shocklee.
+          And then came <strong>Public Enemy</strong> — the most politically
+          charged, socially explosive force hip-hop had ever witnessed. At the
+          epicenter of that seismic sound stood Keith Shocklee.
         </motion.p>
 
         <motion.p
@@ -45,6 +45,11 @@ export default function Chapter03() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 1.3, duration: 1 }}
         >
-          Keith wasn’t producing music — he was producing *momentum*. His sound
-          was urgency. His beats were activism. The move
-
+          Keith wasn’t producing music — he was producing <em>momentum</em>. His
+          sound was urgency. His beats were activism. The movement he helped
+          ignite became the soundtrack of resistance, pride, and possibility.
+        </motion.p>
+      </div>
+    </Section>
+  );
+}
