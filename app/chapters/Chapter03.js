@@ -7,7 +7,6 @@ export default function Chapter03() {
   return (
     <Section id="chapter-03" snap={false}>
       <div style={{ maxWidth: "900px" }}>
-
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,8 +34,9 @@ export default function Chapter03() {
         >
           Tracks like <strong>“Rebel Without a Pause”</strong>,{" "}
           <strong>“Bring the Noise”</strong>, and{" "}
-          <strong>“Fight the Power”</strong> didn’t just move bodies —
-          they moved history. They shook governments.
+          <strong>“Fight the Power”</strong> didn’t just move bodies — they
+          moved history. They shook governments. They cracked open conversations.
+          They electrified a generation.
         </motion.p>
 
         <motion.p
@@ -45,10 +45,10 @@ export default function Chapter03() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 1.3, duration: 1 }}
         >
-          Keith wasn’t producing music — he was producing <em>momentum</em>. His sound was urgency.
-          His beats were activism. His work became the rhythm of revolution.
+          Keith wasn’t producing music — he was producing <em>momentum</em>.
+          His sound was urgency. His beats were activism. The movement he helped
+          build became a cultural awakening that echoed far beyond the speakers.
         </motion.p>
-
       </div>
     </Section>
   );
