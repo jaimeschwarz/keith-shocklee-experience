@@ -1,52 +1,52 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
-export default function ChapterNav() {
-  const chapterIds = [
-    "chapter-00",
-    "chapter-01",
-    "chapter-02",
-    "chapter-03",
-    "chapter-04",
-    "chapter-05",
-    "chapter-06",
-    "chapter-07",
+export default function ChapterNav({ active, goToChapter }) {
+  const chapters = [
+    { id: 0, label: "Prologue" },
+    { id: 1, label: "Chapter 1" },
+    { id: 2, label: "Chapter 2" },
+    { id: 3, label: "Chapter 3" },
+    { id: 4, label: "Chapter 4" },
+    { id: 5, label: "Chapter 5" },
+    { id: 6, label: "Chapter 6" },
+    { id: 7, label: "Epilogue" },
   ];
 
-  const [active, setActive] = useState("chapter-00");
-
-  useEffect(() => {
-    function onScroll() {
-      const mid = window.innerHeight / 2;
-
-      for (const id of chapterIds) {
-        const el = document.getElementById(id);
-        if (!el) continue;
-
-        const rect = el.getBoundingClientRect();
-        const inView = rect.top <= mid && rect.bottom >= mid;
-
-        if (inView) {
-          setActive(id);
-          break;
-        }
-      }
-    }
-
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  function goToChapter(id) {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  }
-
   return (
-    <div className="chapter-nav">
-      {chapterIds.map((id) => (
+    <nav
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        gap: "1rem",
+        justifyContent: "center",
+        padding: "1rem",
+        background: "#000",
+        color: "#fff",
+        position: "sticky",
+        top: 0,
+        zIndex: 10,
+      }}
+    >
+      {chapters.map(({ id, label }) => (
         <button
           key={id}
-          className={active === id ? "active" : ""}
-          onClick={() => goToChapter(
-
+          onClick={() => goToChapter(id)}
+          style={{
+            padding: "0.6rem 1.2rem",
+            borderRadius: "6px",
+            border: "1px solid #444",
+            background: active === id ? "#fff" : "#111",
+            color: active === id ? "#000" : "#fff",
+            cursor: "pointer",
+            fontWeight: active === id ? "700" : "400",
+            textTransform: "uppercase",
+            fontSize: "0.75rem",
+            letterSpacing: "0.05em",
+          }}
+        >
+          {label}
+        </button>
+      ))}
+    </nav>
+  );
+}
