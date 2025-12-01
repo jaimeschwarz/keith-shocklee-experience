@@ -11,7 +11,7 @@ export default function ChapterNav({ active, goToChapter }) {
     { id: 6, label: "Chapter 6" },
     { id: 7, label: "Epilogue" }
   ];
-
+ 
   return (
     <nav
       style={{
