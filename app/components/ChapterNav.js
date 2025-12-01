@@ -24,7 +24,7 @@ export default function ChapterNav({ active, goToChapter }) {
         color: "#fff",
         position: "sticky",
         top: 0,
-        zIndex: 10
+        zIndex: 10,
       }}
     >
       {chapters.map(({ id, label }) => (
@@ -41,7 +41,7 @@ export default function ChapterNav({ active, goToChapter }) {
             fontWeight: active === id ? "700" : "400",
             textTransform: "uppercase",
             fontSize: "0.75rem",
-            letterSpacing: "0.05em"
+            letterSpacing: "0.05em",
           }}
         >
           {label}
